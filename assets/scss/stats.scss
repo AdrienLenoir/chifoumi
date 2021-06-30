@@ -1,0 +1,59 @@
+.stats-gui {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lighten($color-primary, 3%);
+  transform: translateY(-100%);
+  transition: transform .4s ease-in-out;
+
+  &-open {
+    transform: translateY(0);
+  }
+
+  .close-button {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+
+    i {
+      cursor: pointer;
+      color: $color-secondary;
+      font-size: 50px;
+    }
+
+    @media screen and (max-width: 450px) {
+      top: auto;
+      right: auto;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      i {
+        font-size: 40px;
+      }
+    }
+  }
+
+  &-content {
+    text-align: center;
+
+    p {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+      min-width: 200px;
+      font-size: 25px;
+
+      span {
+        color: $color-tertiary;
+        margin-left: 10px;
+      }
+    }
+  }
+}

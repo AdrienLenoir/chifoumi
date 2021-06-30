@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chifoumi</title>
+    <meta name="description" content="Jeu 'chifoumi' (pierre - papier - ciseaux)">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" crossorigin>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="game-header">
+    <div class="game-header-wrapper container">
+        <h1>Chifoumi</h1>
+        <ul class="game-buttons">
+            <li>
+                <button id="statsButton">Statistiques <i class="fas fa-chart-pie"></i></button>
+            </li>
+        </ul>
+    </div>
+</header>
+<main class="game">
+    <div class="container">
+        <div class="chose-hand" id="choseHandSection">
+            <div class="select-hand" data-index="0">
+                <i class="fas fa-hand-rock"></i>
+            </div>
+            <div class="select-hand" data-index="1">
+                <i class="fas fa-hand-paper"></i>
+            </div>
+            <div class="select-hand" data-index="2">
+                <i class="fas fa-hand-scissors"></i>
+            </div>
+        </div>
+        <div class="reveal" id="revealSection">
+            <div class="result">
+                <div class="player">
+                    <div class="preview-hand" id="playerHand">
+                        <span id="playerHandIcon"></span>
+                        <p>Vous</p>
+                    </div>
+                </div>
+                <div class="cross">
+                    <span>X</span>
+                    <span id="resultText">Perdu</span>
+                </div>
+                <div class="computer">
+                    <div class="preview-hand" id="robotHand">
+                        <span id="robotHandIcon"></span>
+                        <p>Robot</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="play-again">
+                <button id="playAgain">Rejouer</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="stats-gui" id="statsGui">
+        <div class="close-button">
+            <i class="fas fa-times" id="statsCloseButton"></i>
+        </div>
+
+        <div class="stats-gui-content">
+            <p>Victoire  <span id="win"></span></p>
+            <p>Égalité  <span id="equalize"></span></p>
+            <p>Défaite  <span id="lose"></span></p>
+        </div>
+    </div>
+</main>
+<script src="assets/js/game.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

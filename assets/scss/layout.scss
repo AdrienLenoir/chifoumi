@@ -1,0 +1,64 @@
+.game-header {
+
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+    height: 80px;
+    line-height: 80px;
+
+    @media screen and (max-width: 450px) {
+      margin-top: 30px;
+      height:auto;
+      line-height: normal;
+      flex-flow: column;
+    }
+  }
+
+  h1 {
+    color: $color-tertiary;
+    text-transform: uppercase;
+    font-size: 35px;
+
+    @media screen and (max-width: 450px) {
+      margin-bottom: 10px;
+    }
+  }
+
+  .game-buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    li:not(:first-child) {
+      margin-left: 8px;
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      padding: 7px 15px;
+      background-color: transparent;
+      border: 2px solid $color-secondary;
+      color: $color-white;
+      font-size: 18px;
+      border-radius: 5px;
+      outline: none;
+      transition: border-color .3s ease-in-out;
+      text-transform: uppercase;
+
+
+      i {
+        color: $color-tertiary;
+        margin-left: 10px;
+      }
+
+      &:hover {
+        border-color: $color-tertiary;
+      }
+    }
+  }
+}
